@@ -25,7 +25,6 @@ function App() {
     }
     setTodos([...todos, newTodo]);
     e.target.reset();
-    console.log(newTodo);
   }
 
 
