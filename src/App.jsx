@@ -15,6 +15,17 @@ function App() {
     e.preventDefault();
     console.log(e);
     
+    const formData = new FormData(e.target);
+    const todoText = formData.get('todo');
+
+    const newTodo = {
+      id: todos.length + 1,
+      text: todoText,
+      completed: false
+    }
+    setTodos([...todos, newTodo]);
+    e.target.reset();
+    console.log(newTodo);
   }
 
 
